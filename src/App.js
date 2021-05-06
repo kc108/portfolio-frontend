@@ -16,7 +16,19 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Testing</h1>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/projects">
+          <Projects URL={URL} />
+        </Route>
+        <Route path="/about">
+          <About URL={URL} />
+        </Route>
+      </Switch>
+      <Footer />
     </div>
   );
 }
